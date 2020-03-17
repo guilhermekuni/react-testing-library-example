@@ -10,6 +10,7 @@ const priceInput = queryByTestId('price');
 
 it('renders correctly', () => {
   expect(amountInput).toBeTruthy();
+  expect(coupomAmountInput).toBeTruthy();
   expect(priceInput).toBeTruthy();
 });
 
