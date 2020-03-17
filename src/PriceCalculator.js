@@ -11,14 +11,26 @@ const UNIT_VALUE = 10;
 
 export default function PriceCalculator() {
   const [amount, setAmount] = useState(0);
-  
+
   const price = useMemo(() => amount * UNIT_VALUE, [amount]);
 
   return (
     <div>
-      <input style={input} type="number" value={amount} onChange={e => setAmount(e.target.value)} />
-      <br/>
-      <input style={input} type="number" value={price} disabled />
+      <input
+        style={input}
+        type="number"
+        value={amount}
+        onChange={e => setAmount(e.target.value)}
+        data-testid="amount"
+      />
+      <br />
+      <input
+        style={input}
+        type="number"
+        value={price}
+        disabled
+        data-testid="price"
+      />
     </div>
   );
 }
